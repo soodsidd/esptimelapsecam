@@ -1,17 +1,16 @@
 #include <Arduino.h>
 #include <esp_sleep.h>
-
+#include <SPI.h>
 #include <RTC/rtc.h>
-
-
 
 const int INT_PIN=14;
 
-const int MININTERVAL=1;
+const int MININTERVAL=5;
 const int HOURINTERVAL=0;
 const int DAYINTERVAL=0;
 
 int loopnumber=0;
+
 
 void wakeuproutine(){
   digitalWrite(LED_BUILTIN, HIGH);
